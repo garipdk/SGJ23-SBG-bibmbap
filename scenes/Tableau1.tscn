@@ -26,3 +26,18 @@ texture = SubResource( 2 )
 position = Vector2( 668, 355 )
 scale = Vector2( 1, -1 )
 has_limited_trys = false
+
+[node name="menu_enquete" type="Control" parent="."]
+margin_right = 1027.0
+margin_bottom = 602.0
+
+[node name="Panel" type="Panel" parent="menu_enquete"]
+margin_right = 1022.0
+margin_bottom = 602.0
+
+[node name="menu_button" type="Button" parent="."]
+margin_left = 943.0
+margin_top = 22.0
+margin_right = 1003.0
+margin_bottom = 91.0
+flat = true
