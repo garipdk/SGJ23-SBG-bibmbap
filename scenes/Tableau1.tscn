@@ -28,6 +28,7 @@ scale = Vector2( 1, -1 )
 has_limited_trys = false
 
 [node name="menu_enquete" type="Control" parent="."]
+visible = false
 margin_right = 1027.0
 margin_bottom = 602.0
 
