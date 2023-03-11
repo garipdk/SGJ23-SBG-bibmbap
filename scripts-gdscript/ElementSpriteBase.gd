@@ -10,6 +10,8 @@ var sprite : Sprite
 
 export(int) var childrens_main_sprite = 0
 
+export(int) var object_type = 0
+
 var is_persone : bool = false
 
 var is_death : bool = false
@@ -46,6 +48,8 @@ func _input_event(_viewport, event, _shape_idx):
 			can_click = limit_try < number_of_try
 		if can_click and event is InputEventMouseButton\
 		   and event.pressed and event.button_index == BUTTON_LEFT:
+			GameState.emit_signal("object_click", name, object_type)
+			if has_limited_trys:
 				number_of_try-=1
 	else:
 		for s in shinies:

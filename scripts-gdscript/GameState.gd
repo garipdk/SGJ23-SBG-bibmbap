@@ -1,17 +1,36 @@
 extends Node
 
+var print_debug_level : int = 6
 
 var unused_var_warnings
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
 
+var objects_clicked : Array
 
-# Called when the node enters the scene tree for the first time.
+signal object_click(object_name, object_type)
+
 func _ready():
+	unused_var_warnings = connect("object_click", self, "_on_Object_Clicked")
 	pass # Replace with function body.
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+# object_type :
+# 0 -> only text
+# 1 -> miniscene
+# ...
+func _on_Object_Clicked(object_name, object_type):
+	var was_already_clicked : bool = false
+	var i : int = 0
+	for object in objects_clicked:
+		if object["object_name"] == object_name:
+			was_already_clicked = true
+			break
+	
+	if not was_already_clicked:
+		objects_clicked.append({"object_name" : object_name, "object_type" : object_type})
+	if print_debug_level >= 6:
+		for object in objects_clicked:
+			print("object : " + str(i))
+			print("object_name : " + object["object_name"])
+			print("object_type : " + str( object["object_type"]))
+			i+=1
+	
+	pass
