@@ -21,3 +21,11 @@ var item_description = {
 		"size":100
 	}
 }
+
+var enquete_item_description = {
+	"key":{
+		"text":"C'est objet appartient à [url=Yun-bok]Yun-bok[/url], fils de [url=Seon-yeong]Seon-yeong[/url].",
+		"hidden_texture_path":"",
+		"found_texture_path":"res://icon.png"
+	}
+}
