@@ -1,8 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://scripts-gdscript/Tableau1.gd" type="Script" id=1]
 [ext_resource path="res://scenes/robot_3d.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/TestElementCliquable.tscn" type="PackedScene" id=3]
+[ext_resource path="res://icon.png" type="Texture" id=4]
+[ext_resource path="res://scenes/menu_enquete.tscn" type="PackedScene" id=5]
 
 [sub_resource type="ViewportTexture" id=2]
 viewport_path = NodePath("Viewport")
@@ -27,18 +29,14 @@ position = Vector2( 668, 355 )
 scale = Vector2( 1, -1 )
 has_limited_trys = false
 
-[node name="menu_enquete" type="Control" parent="."]
-visible = false
-margin_right = 1027.0
-margin_bottom = 602.0
+[node name="menu_enquete" parent="." instance=ExtResource( 5 )]
 
-[node name="Panel" type="Panel" parent="menu_enquete"]
-margin_right = 1022.0
-margin_bottom = 602.0
-
-[node name="menu_button" type="Button" parent="."]
+[node name="menu_button" type="TextureButton" parent="."]
 margin_left = 943.0
 margin_top = 22.0
 margin_right = 1003.0
 margin_bottom = 91.0
-flat = true
+toggle_mode = true
+texture_normal = ExtResource( 4 )
+
+[connection signal="toggled" from="menu_button" to="menu_enquete" method="_on_menu_button_toggled"]
