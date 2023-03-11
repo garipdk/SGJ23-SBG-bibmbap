@@ -2,7 +2,6 @@
 
 [ext_resource path="res://scripts-gdscript/hyper_panel.gd" type="Script" id=1]
 
-
 [node name="hyper_panel" type="Control"]
 margin_right = 204.0
 script = ExtResource( 1 )
