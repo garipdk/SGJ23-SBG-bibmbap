@@ -45,8 +45,7 @@ func _input_event(_viewport, event, _shape_idx):
 		if has_limited_trys:
 			can_click = limit_try < number_of_try
 		if can_click and event is InputEventMouseButton\
-		   and event.pressed and event.button_index == BUTTON_LEFT\
-		   and not GameState.text_menu_is_used:
+		   and event.pressed and event.button_index == BUTTON_LEFT:
 				number_of_try-=1
 	else:
 		for s in shinies:

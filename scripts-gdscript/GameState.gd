@@ -1,6 +1,5 @@
 extends Node
 
-var text_menu_is_used : bool = false
 
 var unused_var_warnings
 # Declare member variables here. Examples:
