@@ -30,6 +30,7 @@ scale = Vector2( 1, -1 )
 has_limited_trys = false
 
 [node name="menu_enquete" parent="." instance=ExtResource( 5 )]
+visible = false
 
 [node name="menu_button" type="TextureButton" parent="."]
 margin_left = 943.0

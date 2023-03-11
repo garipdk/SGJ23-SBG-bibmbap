@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://scripts-gdscript/menu_enquete.gd" type="Script" id=1]
 [ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://scenes/item_presentation.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/phrase_enigme.gd" type="Script" id=4]
 
 [node name="menu_enquete" type="Control"]
 margin_right = 1027.0
@@ -27,27 +29,14 @@ margin_top = 35.0
 margin_right = 378.0
 margin_bottom = 164.0
 
-[node name="item_presentation" type="HBoxContainer" parent="carnet/VBoxContainer"]
-margin_right = 378.0
-margin_bottom = 100.0
+[node name="item_presentation" parent="carnet/VBoxContainer" instance=ExtResource( 3 )]
 
-[node name="TextureRect" type="TextureRect" parent="carnet/VBoxContainer/item_presentation"]
-margin_right = 100.0
-margin_bottom = 100.0
-rect_min_size = Vector2( 100, 100 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="spacer" type="Control" parent="carnet/VBoxContainer/item_presentation"]
-margin_left = 104.0
-margin_right = 204.0
-margin_bottom = 100.0
-rect_min_size = Vector2( 100, 100 )
-
-[node name="RichTextLabel" type="RichTextLabel" parent="carnet/VBoxContainer/item_presentation"]
-margin_left = 208.0
-margin_right = 208.0
-margin_bottom = 100.0
-bbcode_enabled = true
-bbcode_text = "Généralement, on utilise un texte en faux latin (le texte ne veut rien dire, il a été modifié), le Lorem ipsum ou Lipsum. L'avantage du latin est que l'opérateur sait au premier coup d'œil que la page contenant ces lignes n'est pas valide et que l'attention du lecteur n'est pas dérangée par le contenu, lui permettant de demeurer concentré sur le seul aspect graphique."
+[node name="phrase_enigme" type="RichTextLabel" parent="."]
+margin_left = 617.0
+margin_top = 70.0
+margin_right = 957.0
+margin_bottom = 387.0
 text = "Généralement, on utilise un texte en faux latin (le texte ne veut rien dire, il a été modifié), le Lorem ipsum ou Lipsum. L'avantage du latin est que l'opérateur sait au premier coup d'œil que la page contenant ces lignes n'est pas valide et que l'attention du lecteur n'est pas dérangée par le contenu, lui permettant de demeurer concentré sur le seul aspect graphique."
+script = ExtResource( 4 )
+
+[connection signal="meta_clicked" from="phrase_enigme" to="phrase_enigme" method="_on_phrase_enigme_meta_clicked"]
