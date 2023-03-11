@@ -7,7 +7,7 @@ var current_meta
 
 func show_panel():
 	current_panel = PANEL.instance()
-	current_panel.load_text(current_meta)
+	current_panel.load_text(current_meta, HypertexteTexts.item_description)
 	get_parent().add_child(current_panel)
 	current_panel.rect_global_position = get_global_mouse_position()+Vector2(-20,-40)
 

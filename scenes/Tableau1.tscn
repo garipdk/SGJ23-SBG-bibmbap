@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://scripts-gdscript/Tableau1.gd" type="Script" id=1]
 [ext_resource path="res://scenes/robot_3d.tscn" type="PackedScene" id=2]
-[ext_resource path="res://scenes/TestElementCliquable.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/chapeau.tscn" type="PackedScene" id=3]
 [ext_resource path="res://icon.png" type="Texture" id=4]
 [ext_resource path="res://scenes/menu_enquete.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/text_on_screen.tscn" type="PackedScene" id=6]
 
 [sub_resource type="ViewportTexture" id=2]
 viewport_path = NodePath("Viewport")
@@ -24,12 +25,15 @@ position = Vector2( 378, 257 )
 scale = Vector2( 1, -1 )
 texture = SubResource( 2 )
 
-[node name="TestElementSpriteCliquable" parent="." instance=ExtResource( 3 )]
+[node name="chapeau" parent="." instance=ExtResource( 3 )]
 position = Vector2( 668, 355 )
 scale = Vector2( 1, -1 )
 has_limited_trys = false
 
+[node name="text_on_screen" parent="." instance=ExtResource( 6 )]
+
 [node name="menu_enquete" parent="." instance=ExtResource( 5 )]
+visible = false
 
 [node name="menu_button" type="TextureButton" parent="."]
 margin_left = 943.0

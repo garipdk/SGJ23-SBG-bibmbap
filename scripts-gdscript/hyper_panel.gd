@@ -1,7 +1,6 @@
 extends Control
 
-func load_text(meta):
-	var dico = HypertexteTexts.item_description
+func load_text(meta, dico):
 	print(dico.keys(),meta)
 	if dico.has(meta):
 		var item_description = dico[meta]

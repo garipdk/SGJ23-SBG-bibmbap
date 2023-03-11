@@ -46,7 +46,7 @@ func _input_event(_viewport, event, _shape_idx):
 		var can_click = true
 		if has_limited_trys:
 			can_click = limit_try < number_of_try
-		if can_click and event is InputEventMouseButton\
+		if (not GameState.text_box_in_used) and can_click and event is InputEventMouseButton\
 		   and event.pressed and event.button_index == BUTTON_LEFT:
 			GameState.emit_signal("object_click", name, object_type)
 			if has_limited_trys:
