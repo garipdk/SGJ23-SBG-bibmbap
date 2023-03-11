@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scenes/hypertexte.gd" type="Script" id=1]
+
+[node name="hypertexte" type="RichTextLabel"]
+margin_right = 115.0
+margin_bottom = 19.0
+bbcode_enabled = true
+bbcode_text = "voici un [url=key]hyperlien[/url]"
+text = "voici un hyperlien"
+script = ExtResource( 1 )
+
+[node name="display_info_timer" type="Timer" parent="."]
+wait_time = 0.35
+one_shot = true
+
+[connection signal="meta_hover_ended" from="." to="." method="_on_hypertexte_meta_hover_ended"]
+[connection signal="meta_hover_started" from="." to="." method="_on_hypertexte_meta_hover_started"]
+[connection signal="timeout" from="display_info_timer" to="." method="_on_display_info_timer_timeout"]
