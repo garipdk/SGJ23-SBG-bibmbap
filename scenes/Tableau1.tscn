@@ -26,3 +26,4 @@ texture = SubResource( 2 )
 position = Vector2( 668, 355 )
 scale = Vector2( 1, -1 )
 has_limited_trys = false
+number_of_try = 2
