@@ -1,16 +1,17 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://scripts-gdscript/ElementSpriteBase.gd" type="Script" id=1]
-[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://assets/2D/telegrameGLOW.png" type="Texture" id=2]
+[ext_resource path="res://assets/2D/telegrame.png" type="Texture" id=3]
 
 [node name="telegramme" type="Area2D"]
 script = ExtResource( 1 )
 has_limited_trys = false
 
 [node name="Sprite" type="Sprite" parent="."]
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 
 [node name="Sprite1" type="Sprite" parent="."]
 visible = false
-modulate = Color( 1, 0, 0, 1 )
+position = Vector2( -1, -3 )
 texture = ExtResource( 2 )
