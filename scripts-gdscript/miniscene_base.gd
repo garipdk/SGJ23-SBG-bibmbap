@@ -1,6 +1,6 @@
 extends Node2D
 
-export(float, 0.1, 0.9) var canvas_size = 0.9
+export(float, 2.0, 2.0) var canvas_size = 1.0
 export(int, 1, 1000000000) var minscene_number = 1
 var one_time : bool = true
 func _ready():

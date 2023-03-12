@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://scripts-gdscript/Tableau1.gd" type="Script" id=1]
 [ext_resource path="res://assets/rendu_appartement002.png" type="Texture" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://scenes/menu_enquete.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/text_on_screen.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scripts-gdscript/YSort.gd" type="Script" id=7]
+[ext_resource path="res://assets/music/jelsonic-saying-goodbye-piano.mp3" type="AudioStream" id=8]
 [ext_resource path="res://scripts-gdscript/YSort_objects.gd" type="Script" id=9]
 [ext_resource path="res://scenes/objects/photo_famille.tscn" type="PackedScene" id=10]
 [ext_resource path="res://scenes/miniscene/photo_famille_miniscene.tscn" type="PackedScene" id=11]
@@ -22,6 +23,11 @@
 [ext_resource path="res://scenes/objects/testament_3.tscn" type="PackedScene" id=21]
 [ext_resource path="res://scenes/objects/testament_2.tscn" type="PackedScene" id=22]
 [ext_resource path="res://scenes/objects/book.tscn" type="PackedScene" id=23]
+[ext_resource path="res://scenes/miniscene/photo_mariage_miniscene.tscn" type="PackedScene" id=24]
+[ext_resource path="res://scenes/miniscene/photo_front_miniscene.tscn" type="PackedScene" id=25]
+[ext_resource path="res://scenes/miniscene/photo_deces_miniscene.tscn" type="PackedScene" id=26]
+[ext_resource path="res://scenes/objects/photo_livre.tscn" type="PackedScene" id=27]
+[ext_resource path="res://scenes/miniscene/photo_livre_miniscene.tscn" type="PackedScene" id=28]
 
 [node name="Tableau1" type="Node2D"]
 script = ExtResource( 1 )
@@ -59,24 +65,28 @@ position = Vector2( 1098, 340 )
 [node name="photo_deces" parent="YSort_objects" instance=ExtResource( 14 )]
 position = Vector2( 255, 216 )
 scale = Vector2( 0.6, 0.6 )
+object_type = 1
 
 [node name="photo_front" parent="YSort_objects" instance=ExtResource( 13 )]
 position = Vector2( 419, 248 )
 scale = Vector2( 0.6, 0.6 )
+object_type = 1
 
 [node name="photo_mariage" parent="YSort_objects" instance=ExtResource( 3 )]
-position = Vector2( 764, 328 )
+position = Vector2( 725, 328 )
 scale = Vector2( 0.6, 0.6 )
+object_type = 1
 
 [node name="testament" parent="YSort_objects" instance=ExtResource( 18 )]
 position = Vector2( -80, 276 )
 
 [node name="titre_proprio" parent="YSort_objects" instance=ExtResource( 19 )]
-position = Vector2( 229, 487 )
+position = Vector2( 228, 482 )
 scale = Vector2( 0.6, 0.6 )
 
 [node name="lettre_front" parent="YSort_objects" instance=ExtResource( 12 )]
 position = Vector2( 783, 358 )
+rotation = -0.0998674
 scale = Vector2( 0.6, 0.6 )
 
 [node name="testament_2" parent="YSort_objects" instance=ExtResource( 22 )]
@@ -90,10 +100,26 @@ scale = Vector2( 0.6, 0.6 )
 position = Vector2( 664, 252 )
 scale = Vector2( 0.7, 0.7 )
 
+[node name="photo_livre" parent="YSort_objects" instance=ExtResource( 27 )]
+position = Vector2( 491, 506 )
+object_type = 1
+
 [node name="YSort_miniscene" type="YSort" parent="." groups=["miniscene"]]
 script = ExtResource( 7 )
 
 [node name="photo_famille_miniscene" parent="YSort_miniscene" instance=ExtResource( 11 )]
+visible = false
+
+[node name="photo_mariage_miniscene" parent="YSort_miniscene" instance=ExtResource( 24 )]
+visible = false
+
+[node name="photo_front_miniscene" parent="YSort_miniscene" instance=ExtResource( 25 )]
+visible = false
+
+[node name="photo_deces_miniscene" parent="YSort_miniscene" instance=ExtResource( 26 )]
+visible = false
+
+[node name="photo_livre_miniscene" parent="YSort_miniscene" instance=ExtResource( 28 )]
 
 [node name="text_on_screen" parent="." instance=ExtResource( 6 )]
 
@@ -108,5 +134,9 @@ margin_bottom = 134.0
 toggle_mode = true
 texture_normal = ExtResource( 4 )
 expand = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+autoplay = true
 
 [connection signal="toggled" from="menu_button" to="menu_enquete" method="_on_menu_button_toggled"]

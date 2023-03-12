@@ -1,6 +1,6 @@
 extends Sprite
 
-var canvas_size = 0.9
+var canvas_size = 2.0
 
 func _ready():
 	var window_size = OS.window_size
