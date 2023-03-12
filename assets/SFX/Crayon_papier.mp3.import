@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Crayon_papier.mp3-6587a733ecd88f11a0657a798766b315.mp3str"
+
+[deps]
+
+source_file="res://assets/SFX/Crayon_papier.mp3"
+dest_files=[ "res://.import/Crayon_papier.mp3-6587a733ecd88f11a0657a798766b315.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

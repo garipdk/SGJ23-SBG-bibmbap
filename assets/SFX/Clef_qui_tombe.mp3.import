@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Clef_qui_tombe.mp3-029a51d069c29473aa123c6480f65ab1.mp3str"
+
+[deps]
+
+source_file="res://assets/SFX/Clef_qui_tombe.mp3"
+dest_files=[ "res://.import/Clef_qui_tombe.mp3-029a51d069c29473aa123c6480f65ab1.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

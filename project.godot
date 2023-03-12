@@ -28,6 +28,7 @@ config/icon="res://icon.png"
 
 HypertexteTexts="*res://scripts-gdscript/hypertexte_texts.gd"
 GameState="*res://scripts-gdscript/GameState.gd"
+AudioManager="*res://scripts-gdscript/audio_manager.gd"
 
 [display]
 

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Ouverture_tiroir.mp3-73693dfa949e02e098994c3e8f365943.mp3str"
+
+[deps]
+
+source_file="res://assets/SFX/Ouverture_tiroir.mp3"
+dest_files=[ "res://.import/Ouverture_tiroir.mp3-73693dfa949e02e098994c3e8f365943.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

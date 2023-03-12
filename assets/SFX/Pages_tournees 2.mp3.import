@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Pages_tournees 2.mp3-e715407cc22caf95af09a376d45ceed7.mp3str"
+
+[deps]
+
+source_file="res://assets/SFX/Pages_tournees 2.mp3"
+dest_files=[ "res://.import/Pages_tournees 2.mp3-e715407cc22caf95af09a376d45ceed7.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/jelsonic-saying-goodbye-piano.mp3-4adcbb44064888568413a0560d73d464.mp3str"
+
+[deps]
+
+source_file="res://assets/music/jelsonic-saying-goodbye-piano.mp3"
+dest_files=[ "res://.import/jelsonic-saying-goodbye-piano.mp3-4adcbb44064888568413a0560d73d464.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://scripts-gdscript/Tableau1.gd" type="Script" id=1]
 [ext_resource path="res://scenes/robot_3d.tscn" type="PackedScene" id=2]
@@ -9,6 +9,8 @@
 [ext_resource path="res://scripts-gdscript/YSort.gd" type="Script" id=7]
 [ext_resource path="res://scenes/chapeau_miniscene.tscn" type="PackedScene" id=8]
 [ext_resource path="res://scripts-gdscript/YSort_objects.gd" type="Script" id=9]
+[ext_resource path="res://scenes/photo_famille.tscn" type="PackedScene" id=10]
+[ext_resource path="res://scenes/photo_famille_miniscene.tscn" type="PackedScene" id=11]
 
 [sub_resource type="ViewportTexture" id=2]
 viewport_path = NodePath("Viewport")
@@ -34,10 +36,16 @@ script = ExtResource( 9 )
 [node name="chapeau" parent="YSort_objects" groups=["objects"] instance=ExtResource( 3 )]
 position = Vector2( 668, 355 )
 
+[node name="photo_famille" parent="YSort_objects" instance=ExtResource( 10 )]
+position = Vector2( 624, 233 )
+object_type = 1
+
 [node name="YSort_miniscene" type="YSort" parent="." groups=["miniscene"]]
 script = ExtResource( 7 )
 
 [node name="chapeau_miniscene" parent="YSort_miniscene" instance=ExtResource( 8 )]
+
+[node name="photo_famille_miniscene" parent="YSort_miniscene" instance=ExtResource( 11 )]
 
 [node name="text_on_screen" parent="." instance=ExtResource( 6 )]
 

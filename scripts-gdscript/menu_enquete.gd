@@ -21,9 +21,9 @@ func _ready():
 		$carnet/ScrollContainer/VBoxContainer.add_child(spacer)
 	
 	#DEBUG signal
-	print('debug signal in menu_enquete')
-	for key in HypertexteTexts.enquete_item_description:
-		GameState.emit_signal("object_click",key,-1)
+#	print('debug signal in menu_enquete')
+#	for key in HypertexteTexts.enquete_item_description:
+#		GameState.emit_signal("object_click",key,-1)
 
 func _on_menu_button_toggled(button_pressed):
 	visible = button_pressed

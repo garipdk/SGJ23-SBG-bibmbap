@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/piano_note3.mp3-6baeef7ba5b73d6f3c40952f7efeb08d.mp3str"
+
+[deps]
+
+source_file="res://assets/SFX/piano_note3.mp3"
+dest_files=[ "res://.import/piano_note3.mp3-6baeef7ba5b73d6f3c40952f7efeb08d.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

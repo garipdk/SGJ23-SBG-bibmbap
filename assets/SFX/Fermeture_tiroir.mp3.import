@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Fermeture_tiroir.mp3-c8230b02de57b2acc181dd6111f69f52.mp3str"
+
+[deps]
+
+source_file="res://assets/SFX/Fermeture_tiroir.mp3"
+dest_files=[ "res://.import/Fermeture_tiroir.mp3-c8230b02de57b2acc181dd6111f69f52.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

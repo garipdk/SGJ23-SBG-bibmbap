@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Serrure_tiroir.mp3-b1f0d735c3bd19ae5cf5a5482d968279.mp3str"
+
+[deps]
+
+source_file="res://assets/SFX/Serrure_tiroir.mp3"
+dest_files=[ "res://.import/Serrure_tiroir.mp3-b1f0d735c3bd19ae5cf5a5482d968279.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0
