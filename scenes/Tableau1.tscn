@@ -120,6 +120,7 @@ visible = false
 visible = false
 
 [node name="photo_livre_miniscene" parent="YSort_miniscene" instance=ExtResource( 28 )]
+visible = false
 
 [node name="text_on_screen" parent="." instance=ExtResource( 6 )]
 
