@@ -11,6 +11,7 @@ var text_box_in_used : bool = false
 var objects_clicked : Array
 
 signal object_click(object_name, object_type)
+signal keyword_selected(item_name, item_type)
 
 func _ready():
 	unused_var_warnings = connect("object_click", self, "_on_Object_Clicked")

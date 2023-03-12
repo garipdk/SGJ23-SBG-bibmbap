@@ -21,7 +21,10 @@ func _ready():
 	
 	#load text
 	if HypertexteTexts.enquete_item_description.has(self_name):
-		$item_presentation_text.bbcode_text = item_dico["text"]
+		var new_bbcode = item_dico["text"]
+		for color_key in HypertexteTexts.text_colors_keys:
+			new_bbcode = new_bbcode.replace(color_key,HypertexteTexts.text_colors_keys[color_key])
+		$item_presentation_text.bbcode_text = new_bbcode
 
 func on_object_click(object_name, object_type):
 	if is_discovered:return
@@ -30,7 +33,10 @@ func on_object_click(object_name, object_type):
 		$item_presentation_text.visible = true
 
 func _on_item_presentation_text_meta_clicked(meta):
-	#check dictionnary w/ meta
-	pass
-#	var info_dico = parse_json(meta)
-#	print(info_dico)
+	if not HypertexteTexts.enquete_item_type.has(meta):
+		print("ERREUR, objet inconnu : "+String(meta))
+		return
+	
+	var item_type_dico = HypertexteTexts.enquete_item_type[meta]
+	var item_type = item_type_dico["type"]
+	GameState.emit_signal("keyword_selected",meta,item_type)
