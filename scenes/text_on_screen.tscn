@@ -1,28 +1,45 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://scenes/hypertexte.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scripts-gdscript/text_on_screen.gd" type="Script" id=2]
 [ext_resource path="res://scripts-gdscript/hyper_panel.gd" type="Script" id=3]
+[ext_resource path="res://assets/ressources/menu_enquete.tres" type="Theme" id=4]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 1, 0.988235, 0.898039, 1 )
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.568627, 0.443137, 0.443137, 1 )
+
+[sub_resource type="Theme" id=3]
+Panel/styles/panel = SubResource( 1 )
+PanelContainer/styles/panel = SubResource( 2 )
 
 [node name="text_on_screen" type="Container"]
-visible = false
 margin_right = 1024.0
 margin_bottom = 600.0
 script = ExtResource( 2 )
 
-[node name="PanelContainer" type="PanelContainer" parent="."]
+[node name="PanelContainer" type="Panel" parent="."]
 margin_top = 476.0
 margin_right = 1024.0
 margin_bottom = 604.0
 grow_vertical = 0
+theme = SubResource( 3 )
 script = ExtResource( 3 )
 
 [node name="RichTextLabel" parent="PanelContainer" instance=ExtResource( 1 )]
-margin_left = 7.0
-margin_top = 7.0
-margin_right = 1017.0
-margin_bottom = 121.0
+margin_left = 20.0
+margin_top = 10.0
+margin_right = 1009.0
+margin_bottom = 118.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
+theme = ExtResource( 4 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
 
 [connection signal="gui_input" from="." to="." method="_exit_text_input"]
