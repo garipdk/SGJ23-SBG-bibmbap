@@ -17,10 +17,11 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
-func _object_clicked_text_on_screen(object_name, _object_type):
-	self.visible = true
-	$PanelContainer.load_text(object_name, HypertexteTexts.description)
-	GameState.text_box_in_used = true
+func _object_clicked_text_on_screen(object_name, object_type):
+	if object_type >= 0:
+		self.visible = true
+		$PanelContainer.load_text(object_name, HypertexteTexts.description)
+		GameState.text_box_in_used = true
 	
 func _exit_text_input(event):
 	if event is InputEventMouseButton\
