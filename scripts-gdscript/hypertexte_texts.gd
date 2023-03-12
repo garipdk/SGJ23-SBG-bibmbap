@@ -71,6 +71,31 @@ var description = {
 +"Sonya\n",
 		"size":100
 	},
+	"photo_famille":{
+		"title":"Photo de famille : ",
+		"text":"Une photo de la famille Lee, comme l’indique l’inscription qui orne le cadre : “Lee Yeong-ho, Lee Seon-yeong, Lee Sun-na, Lee Yun-bok et Lee Tae-sun, octobre 1947”. Ils ont l’air heureux.",
+		"size":100
+	},
+	"photo_deces":{
+		"title":"Portrait funéraire : ",
+		"text":"Un portrait funéraire de Lee Seon-yeong, semble-t-il.",
+		"size":100
+	},
+	"photo_front":{
+		"title":"Photo de guerre : ",
+		"text":"La lettre est accompagnée d’une photo de Lee Yeong-ho et de son frère Lee Cheol-ho. Ils ont l’air complices, même dans les temps les plus sombres de l’histoire.",
+		"size":100
+	},
+	"photo_mariage":{
+		"title":"Photo de mariage : ",
+		"text":"Une photo de mariage. L’inscription sous le cadre indique qu’il s’agit de Lee Yeong-ho et de Lee Sonya. Il y a une lettre, derrière le cadre.",
+		"size":100
+	},
+	"photo_livre":{
+		"title":"Photo d’anniversaire : ",
+		"text":"Une photo de Sonya, avec un livre dans les mains. Il s’agit de La Légende de Hong Gil-dong, un classique. Au dos de la photo, on peut lire “From Michael to Sonya”.",
+		"size":100
+	},
 }
 
 var item_description = {#pour hypertxt
