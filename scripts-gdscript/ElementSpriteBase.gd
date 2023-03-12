@@ -58,7 +58,7 @@ func _input_event(_viewport, event, _shape_idx):
 
 func _process(_delta):
 	if GameState.miniscene_actif > 0 :
-		current_group = "miniscene"
+		current_group = "miniscene_" + str(GameState.current_miniscene)
 	else:
 		current_group = "objects"
 	

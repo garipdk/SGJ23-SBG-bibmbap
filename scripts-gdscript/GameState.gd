@@ -4,6 +4,7 @@ var print_debug_level : int = 6
 
 var text_box_size : int = 128
 
+var current_miniscene : int = 0
 var miniscene_actif : int = 0
 
 var unused_var_warnings
