@@ -3,7 +3,7 @@
 [ext_resource path="res://scripts-gdscript/Tableau1.gd" type="Script" id=1]
 [ext_resource path="res://scenes/robot_3d.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/chapeau.tscn" type="PackedScene" id=3]
-[ext_resource path="res://icon.png" type="Texture" id=4]
+[ext_resource path="res://assets/UI/book.png" type="Texture" id=4]
 [ext_resource path="res://scenes/menu_enquete.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/text_on_screen.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scripts-gdscript/YSort.gd" type="Script" id=7]
@@ -53,11 +53,12 @@ script = ExtResource( 7 )
 visible = false
 
 [node name="menu_button" type="TextureButton" parent="."]
-margin_left = 943.0
-margin_top = 22.0
-margin_right = 1003.0
-margin_bottom = 91.0
+margin_left = 898.0
+margin_top = 4.0
+margin_right = 1028.0
+margin_bottom = 134.0
 toggle_mode = true
 texture_normal = ExtResource( 4 )
+expand = true
 
 [connection signal="toggled" from="menu_button" to="menu_enquete" method="_on_menu_button_toggled"]
