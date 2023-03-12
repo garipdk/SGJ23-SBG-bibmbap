@@ -1,7 +1,7 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://scripts-gdscript/menu_enquete.gd" type="Script" id=1]
-[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://assets/fonts/SourceSerifPro-Bold.otf" type="DynamicFontData" id=2]
 [ext_resource path="res://assets/ressources/menu_enquete.tres" type="Theme" id=3]
 [ext_resource path="res://scripts-gdscript/phrase_enigme.gd" type="Script" id=4]
 [ext_resource path="res://scenes/completing_cursor.gd" type="Script" id=5]
@@ -25,30 +25,35 @@ font_data = ExtResource( 7 )
 default_font = SubResource( 4 )
 Label/styles/normal = SubResource( 3 )
 
+[sub_resource type="DynamicFont" id=6]
+size = 25
+font_data = ExtResource( 2 )
+
 [node name="menu_enquete" type="Control"]
 margin_right = 1027.0
 margin_bottom = 602.0
 script = ExtResource( 1 )
 
+[node name="ColorRect2" type="ColorRect" parent="."]
+margin_left = -16.0
+margin_top = -23.0
+margin_right = 1040.0
+margin_bottom = 639.0
+color = Color( 0.960784, 0.956863, 0.921569, 1 )
+
 [node name="Panel" type="Panel" parent="."]
+visible = false
 margin_right = 1022.0
 margin_bottom = 602.0
 
 [node name="carnet" type="Node2D" parent="."]
 position = Vector2( 82, 43 )
 
-[node name="page" type="Node2D" parent="carnet"]
-
-[node name="Sprite" type="Sprite" parent="carnet/page"]
-position = Vector2( 188, 266 )
-scale = Vector2( 5.90625, 7.75 )
-texture = ExtResource( 2 )
-
 [node name="ScrollContainer" type="ScrollContainer" parent="carnet"]
 margin_left = -6.0
-margin_top = 33.0
+margin_top = 55.0
 margin_right = 394.0
-margin_bottom = 505.0
+margin_bottom = 493.0
 rect_min_size = Vector2( 400, 0 )
 
 [node name="VBoxContainer" type="VBoxContainer" parent="carnet/ScrollContainer"]
@@ -57,10 +62,11 @@ rect_min_size = Vector2( 380, 0 )
 
 [node name="phrase_enigme" type="RichTextLabel" parent="."]
 margin_left = 559.0
-margin_top = 75.0
+margin_top = 95.0
 margin_right = 932.0
-margin_bottom = 485.0
+margin_bottom = 505.0
 theme = ExtResource( 3 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = true
 bbcode_text = "La famille Lee se compose de cinq membres : [url=Yeong-ho_A]??????????[/url], le père, [url=Seon-yeong]???????????[/url], la mère, et les trois enfants  [url=enfants_A]???????????[/url]. Après [url=funeraire]??????????[/url], le chef de famille tombe sous le charme de [url=Sonya_A]??????????[/url] qu’il épouse rapidement. Peu de temps après, [url=guerre]???????????[/url] éclate, et [url=Yeong-ho_B]??????????[/url] est [url=front]??????????[/url] avec son frère aîné [url=Cheol-ho_A]??????????[/url].
 Pendant l’absence de son époux, [url=Sonya_B]??????????[/url] rencontre [url=Michael_A]??????????[/url] au contact duquel elle expérimente la vie urbaine, et prend goût à la liberté offerte par le monde moderne. A la mort de [url=Yeong-ho_C]??????????[/url], elle décide de [url=demeure_A]??????????[/url], en cachant le [url=testament]??????????[/url], et en faisant faire un [url=proprio]??????????[/url] à son nom. Elle prévoit également de se débarrasser de[url=enfants_B]??????????[/url].
@@ -94,22 +100,36 @@ theme = SubResource( 5 )
 
 [node name="check_button" type="Button" parent="."]
 margin_left = 703.0
-margin_top = 494.0
+margin_top = 513.0
 margin_right = 761.0
-margin_bottom = 514.0
+margin_bottom = 533.0
 text = "Vérifier"
 
+[node name="Label" type="Label" parent="."]
+margin_left = 127.0
+margin_top = 35.0
+margin_right = 335.0
+margin_bottom = 70.0
+theme = ExtResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 6 )
+text = "OBJETS IMPORTANTS"
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 638.0
+margin_top = 35.0
+margin_right = 846.0
+margin_bottom = 70.0
+theme = ExtResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 6 )
+text = "Histoire à compléter"
+
 [node name="GO_menu" type="Control" parent="."]
+visible = false
 margin_right = 1025.0
 margin_bottom = 601.0
 script = ExtResource( 8 )
-
-[node name="ColorRect" type="ColorRect" parent="GO_menu"]
-margin_left = -16.0
-margin_top = -23.0
-margin_right = 1040.0
-margin_bottom = 639.0
-color = Color( 0.180392, 0.180392, 0.180392, 1 )
 
 [node name="titre" type="Label" parent="GO_menu"]
 margin_left = 355.0
@@ -145,6 +165,11 @@ margin_top = 551.0
 margin_right = 533.0
 margin_bottom = 571.0
 text = "replay"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
 
 [connection signal="meta_clicked" from="phrase_enigme" to="phrase_enigme" method="_on_phrase_enigme_meta_clicked"]
 [connection signal="pressed" from="check_button" to="phrase_enigme" method="_on_check_button_pressed"]
