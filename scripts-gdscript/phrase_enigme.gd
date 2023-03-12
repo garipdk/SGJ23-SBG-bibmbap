@@ -4,6 +4,7 @@ var placeholder = "?" #symbol used for places to complete
 
 func _ready():
 	HypertexteTexts.base_text = bbcode_text
+	HypertexteTexts.good_text = $store_good_text.bbcode_text
 
 func _on_phrase_enigme_meta_clicked(meta):
 	if get_parent().is_completing:
@@ -37,7 +38,10 @@ func _on_phrase_enigme_meta_clicked(meta):
 
 
 func _on_check_button_pressed():
+	print(bbcode_text)
+	
 	var display_text = bbcode_text
+#	var display_text = ""
 	if display_text.find(placeholder) == -1:
 		#no place holder
 		

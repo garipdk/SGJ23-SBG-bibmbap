@@ -40,9 +40,9 @@ func _on_Object_Clicked(object_name, object_type):
 		objects_clicked.append({"object_name" : object_name, "object_type" : object_type})
 	if print_debug_level >= 6:
 		for object in objects_clicked:
-			print("object : " + str(i))
-			print("object_name : " + object["object_name"])
-			print("object_type : " + str( object["object_type"]))
+#			print("object : " + str(i))
+#			print("object_name : " + object["object_name"])
+#			print("object_type : " + str( object["object_type"]))
 			i+=1
 	
 	pass
