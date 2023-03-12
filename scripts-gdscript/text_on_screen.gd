@@ -8,6 +8,7 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	GameState.text_box_size = $PanelContainer.rect_size.y
 	self.visible = false
 	GameState.unused_var_warnings = GameState.connect("object_click", self, "_object_clicked_text_on_screen")
 	pass # Replace with function body.

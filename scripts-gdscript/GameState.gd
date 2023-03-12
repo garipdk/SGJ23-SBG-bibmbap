@@ -2,6 +2,10 @@ extends Node
 
 var print_debug_level : int = 6
 
+var text_box_size : int = 128
+
+var miniscene_actif : int = 0
+
 var unused_var_warnings
 var text_box_in_used : bool = false
 var objects_clicked : Array
@@ -24,6 +28,10 @@ func is_already_clicked(object_name) -> bool:
 # 0 -> only text
 # 1 -> miniscene
 # ...
+enum{
+	object_type_text = 0,
+	object_type_miniscene = 1
+}
 func _on_Object_Clicked(object_name, object_type):
 	var i : int = 0
 	if not is_already_clicked(object_name):
