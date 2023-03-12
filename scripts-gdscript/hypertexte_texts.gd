@@ -64,7 +64,7 @@ var enquete_item_description = {
 		"found_texture_path":"res://icon.png"
 	},
 	"titre_proprio":{
-		"text":"[color=*object*][url=Titre de propriété]Titre de propriété[/url][/color] au nom de Sonya, pour [color=*event*][url=s’emparer de la demeure familiale]s’emparer de la demeure familiale[/url][/color].",
+		"text":"[color=*object*][url=titre de propriété]Titre de propriété[/url][/color] au nom de Sonya, pour [color=*event*][url=s’emparer de la demeure familiale]s’emparer de la demeure familiale[/url][/color].",
 		"hidden_texture_path":"res://icon.png",
 		"found_texture_path":"res://icon.png"
 	},
@@ -130,7 +130,7 @@ var enquete_item_type = {
 	"proprio":{
 		"type":"object"
 	},
-	"Titre de propriété":{
+	"titre de propriété":{
 		"type":"object"
 	}
 }
@@ -153,10 +153,10 @@ var in_text_correspondances = {
 	"Michael_A":"Michael, un soldat américain",
 	"Michael_B":"Michael, un soldat américain",
 	"Michael_C":"Michael, un soldat américain",
-	"demeure_A":"demeure",
-	"demeure_B":"demeure",
+	"demeure_A":"s’emparer de la demeure familiale",
+	"demeure_B":"s’emparer de la demeure familiale",
 	"testament":"le testament de Yeong-ho",
-	"proprio":"proprio",
+	"proprio":"titre de propriété",
 	"lettre_michael_A":"lettre_michael",
 	"lettre_michael_B":"lettre_michael",
 	"plan":"plan"

@@ -1,20 +1,12 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://scripts-gdscript/menu_enquete.gd" type="Script" id=1]
 [ext_resource path="res://icon.png" type="Texture" id=2]
-[ext_resource path="res://scenes/item_presentation.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/ressources/menu_enquete.tres" type="Theme" id=3]
 [ext_resource path="res://scripts-gdscript/phrase_enigme.gd" type="Script" id=4]
 [ext_resource path="res://scenes/completing_cursor.gd" type="Script" id=5]
-[ext_resource path="res://assets/fonts/SourceSerifPro-Regular.otf" type="DynamicFontData" id=6]
 [ext_resource path="res://assets/fonts/SourceSerifPro-Black.otf" type="DynamicFontData" id=7]
 [ext_resource path="res://scripts-gdscript/GO_menu.gd" type="Script" id=8]
-
-[sub_resource type="DynamicFont" id=1]
-size = 14
-font_data = ExtResource( 6 )
-
-[sub_resource type="Theme" id=2]
-default_font = SubResource( 1 )
 
 [sub_resource type="StyleBoxFlat" id=3]
 corner_radius_top_left = 5
@@ -61,38 +53,36 @@ rect_min_size = Vector2( 400, 0 )
 
 [node name="VBoxContainer" type="VBoxContainer" parent="carnet/ScrollContainer"]
 margin_right = 380.0
-margin_bottom = 100.0
 rect_min_size = Vector2( 380, 0 )
 
-[node name="item_presentation" parent="carnet/ScrollContainer/VBoxContainer" instance=ExtResource( 3 )]
-margin_right = 380.0
-
 [node name="phrase_enigme" type="RichTextLabel" parent="."]
-margin_left = 617.0
+margin_left = 559.0
 margin_top = 75.0
-margin_right = 990.0
-margin_bottom = 508.0
-theme = SubResource( 2 )
+margin_right = 932.0
+margin_bottom = 485.0
+theme = ExtResource( 3 )
 bbcode_enabled = true
 bbcode_text = "La famille Lee se compose de cinq membres : [url=Yeong-ho_A]??????????[/url], le père, [url=Seon-yeong]???????????[/url], la mère, et les trois enfants  [url=enfants_A]???????????[/url]. Après [url=funeraire]??????????[/url], le chef de famille tombe sous le charme de [url=Sonya_A]??????????[/url] qu’il épouse rapidement. Peu de temps après, [url=guerre]???????????[/url] éclate, et [url=Yeong-ho_B]??????????[/url] est [url=front]??????????[/url] avec son frère aîné [url=Cheol-ho_A]??????????[/url].
-Pendant l’absence de son époux, [url=Sonya_B]??????????[/url] rencontre [url=Michael]??????????[/url] au contact duquel elle expérimente la vie urbaine, et prend goût à la liberté offerte par le monde moderne. A la mort de [url=Yeong-ho_C]??????????[/url], elle décide de [url=demeure_A]??????????[/url], en cachant le [url=testament]??????????[/url], et en faisant faire un [url=proprio]??????????[/url] à son nom. Elle prévoit également de se débarrasser de[url=enfants_B]??????????[/url].
-Par chance, [url=Cheol-ho_B]??????????[/url] découvre ses machinations lorsqu’il tombe sur la lettre à [url=Michael_B]??????????[/url] qu’elle s’apprêtait à envoyer, et dans laquelle elle révèle tout son plan pour [url=demeure_B]??????????[/url]. Effaré, il se saisit de la justice, et confie la lettre à [url=Michael_C]??????????[/url] en guise de preuve à son avocat.
-
-
-
-
-
-"
+Pendant l’absence de son époux, [url=Sonya_B]??????????[/url] rencontre [url=Michael_A]??????????[/url] au contact duquel elle expérimente la vie urbaine, et prend goût à la liberté offerte par le monde moderne. A la mort de [url=Yeong-ho_C]??????????[/url], elle décide de [url=demeure_A]??????????[/url], en cachant le [url=testament]??????????[/url], et en faisant faire un [url=proprio]??????????[/url] à son nom. Elle prévoit également de se débarrasser de[url=enfants_B]??????????[/url].
+Par chance, [url=Cheol-ho_B]??????????[/url] découvre ses machinations lorsqu’il tombe sur la lettre à [url=Michael_B]??????????[/url] qu’elle s’apprêtait à envoyer, et dans laquelle elle révèle tout son plan pour [url=demeure_B]??????????[/url]. Effaré, il se saisit de la justice, et confie la lettre à [url=Michael_C]??????????[/url] en guise de preuve à son avocat."
 text = "La famille Lee se compose de cinq membres : ??????????, le père, ???????????, la mère, et les trois enfants  ???????????. Après ??????????, le chef de famille tombe sous le charme de ?????????? qu’il épouse rapidement. Peu de temps après, ??????????? éclate, et ?????????? est ?????????? avec son frère aîné ??????????.
 Pendant l’absence de son époux, ?????????? rencontre ?????????? au contact duquel elle expérimente la vie urbaine, et prend goût à la liberté offerte par le monde moderne. A la mort de ??????????, elle décide de ??????????, en cachant le ??????????, et en faisant faire un ?????????? à son nom. Elle prévoit également de se débarrasser de??????????.
-Par chance, ?????????? découvre ses machinations lorsqu’il tombe sur la lettre à ?????????? qu’elle s’apprêtait à envoyer, et dans laquelle elle révèle tout son plan pour ??????????. Effaré, il se saisit de la justice, et confie la lettre à ?????????? en guise de preuve à son avocat.
-
-
-
-
-
-"
+Par chance, ?????????? découvre ses machinations lorsqu’il tombe sur la lettre à ?????????? qu’elle s’apprêtait à envoyer, et dans laquelle elle révèle tout son plan pour ??????????. Effaré, il se saisit de la justice, et confie la lettre à ?????????? en guise de preuve à son avocat."
 script = ExtResource( 4 )
+
+[node name="store_good_text" type="RichTextLabel" parent="phrase_enigme"]
+visible = false
+margin_left = -617.0
+margin_top = -75.0
+margin_right = -577.0
+margin_bottom = -35.0
+bbcode_enabled = true
+bbcode_text = "La famille Lee se compose de cinq membres : [url=Yeong-ho_A]Yeong-ho[/url], le père, [url=Seon-yeong]Seon-yeong[/url], la mère, et les trois enfants  [url=enfants_A]Sun-na, Yun-bok et Tae-sun[/url]. Après [url=funeraire]le décès de Seon-yeong[/url], le chef de famille tombe sous le charme de [url=Sonya_A]Sonya[/url] qu’il épouse rapidement. Peu de temps après, [url=guerre]la guerre de Corée[/url] éclate, et [url=Yeong-ho_B]Yeong-ho[/url] est [url=front]envoyé au front[/url] avec son frère aîné [url=Cheol-ho_A]Cheol-ho[/url].
+Pendant l’absence de son époux, [url=Sonya_B]Sonya[/url] rencontre [url=Michael_A]Michael, un soldat américain[/url] au contact duquel elle expérimente la vie urbaine, et prend goût à la liberté offerte par le monde moderne. A la mort de [url=Yeong-ho_C]Yeong-ho[/url], elle décide de [url=demeure_A]s’emparer de la demeure familiale[/url], en cachant le [url=testament]le testament de Yeong-ho[/url], et en faisant faire un [url=proprio]titre de propriété[/url] à son nom. Elle prévoit également de se débarrasser de[url=enfants_B]Sun-na, Yun-bok et Tae-sun[/url].
+Par chance, [url=Cheol-ho_B]Cheol-ho[/url] découvre ses machinations lorsqu’il tombe sur la lettre à [url=Michael_B]Michael, un soldat américain[/url] qu’elle s’apprêtait à envoyer, et dans laquelle elle révèle tout son plan pour [url=demeure_B]s’emparer de la demeure familiale[/url]. Effaré, il se saisit de la justice, et confie la lettre à [url=Michael_C]Michael, un soldat américain[/url] en guise de preuve à son avocat."
+text = "La famille Lee se compose de cinq membres : Yeong-ho, le père, Seon-yeong, la mère, et les trois enfants  Sun-na, Yun-bok et Tae-sun. Après le décès de Seon-yeong, le chef de famille tombe sous le charme de Sonya qu’il épouse rapidement. Peu de temps après, la guerre de Corée éclate, et Yeong-ho est envoyé au front avec son frère aîné Cheol-ho.
+Pendant l’absence de son époux, Sonya rencontre Michael, un soldat américain au contact duquel elle expérimente la vie urbaine, et prend goût à la liberté offerte par le monde moderne. A la mort de Yeong-ho, elle décide de s’emparer de la demeure familiale, en cachant le le testament de Yeong-ho, et en faisant faire un titre de propriété à son nom. Elle prévoit également de se débarrasser deSun-na, Yun-bok et Tae-sun.
+Par chance, Cheol-ho découvre ses machinations lorsqu’il tombe sur la lettre à Michael, un soldat américain qu’elle s’apprêtait à envoyer, et dans laquelle elle révèle tout son plan pour s’emparer de la demeure familiale. Effaré, il se saisit de la justice, et confie la lettre à Michael, un soldat américain en guise de preuve à son avocat."
 
 [node name="completing_cursor" type="Node2D" parent="."]
 script = ExtResource( 5 )
@@ -103,14 +93,13 @@ margin_bottom = 14.0
 theme = SubResource( 5 )
 
 [node name="check_button" type="Button" parent="."]
-margin_left = 760.0
+margin_left = 703.0
 margin_top = 494.0
-margin_right = 818.0
+margin_right = 761.0
 margin_bottom = 514.0
 text = "Vérifier"
 
 [node name="GO_menu" type="Control" parent="."]
-visible = false
 margin_right = 1025.0
 margin_bottom = 601.0
 script = ExtResource( 8 )
@@ -127,6 +116,7 @@ margin_left = 355.0
 margin_top = 60.0
 margin_right = 634.0
 margin_bottom = 74.0
+theme = ExtResource( 3 )
 text = "Félicitation, vous avez reconstitué l'histoire"
 
 [node name="texte complet" type="RichTextLabel" parent="GO_menu"]
@@ -134,6 +124,7 @@ margin_left = 177.0
 margin_top = 135.0
 margin_right = 776.0
 margin_bottom = 333.0
+theme = ExtResource( 3 )
 bbcode_enabled = true
 bbcode_text = "The quick brown fox"
 meta_underlined = false
@@ -145,6 +136,7 @@ margin_left = 177.0
 margin_top = 135.0
 margin_right = 217.0
 margin_bottom = 175.0
+theme = ExtResource( 3 )
 
 [node name="Button" type="Button" parent="GO_menu"]
 visible = false
