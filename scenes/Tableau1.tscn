@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://scripts-gdscript/Tableau1.gd" type="Script" id=1]
 [ext_resource path="res://assets/rendu_appartement002.png" type="Texture" id=2]
@@ -7,7 +7,6 @@
 [ext_resource path="res://scenes/menu_enquete.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/text_on_screen.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scripts-gdscript/YSort.gd" type="Script" id=7]
-[ext_resource path="res://scenes/miniscene/chapeau_miniscene.tscn" type="PackedScene" id=8]
 [ext_resource path="res://scripts-gdscript/YSort_objects.gd" type="Script" id=9]
 [ext_resource path="res://scenes/objects/photo_famille.tscn" type="PackedScene" id=10]
 [ext_resource path="res://scenes/miniscene/photo_famille_miniscene.tscn" type="PackedScene" id=11]
@@ -59,15 +58,13 @@ position = Vector2( 157, 506 )
 position = Vector2( 351, 456 )
 
 [node name="testament" parent="YSort_objects" instance=ExtResource( 18 )]
-position = Vector2( 265, 438 )
+position = Vector2( 355, 81 )
 
 [node name="titre_proprio" parent="YSort_objects" instance=ExtResource( 19 )]
-position = Vector2( 930, 567 )
+position = Vector2( 477, 217 )
 
 [node name="YSort_miniscene" type="YSort" parent="." groups=["miniscene"]]
 script = ExtResource( 7 )
-
-[node name="chapeau_miniscene" parent="YSort_miniscene" instance=ExtResource( 8 )]
 
 [node name="photo_famille_miniscene" parent="YSort_miniscene" instance=ExtResource( 11 )]
 
