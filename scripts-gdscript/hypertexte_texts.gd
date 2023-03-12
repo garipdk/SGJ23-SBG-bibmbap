@@ -114,53 +114,53 @@ var item_description = {#pour hypertxt
 var enquete_item_description = {
 	"photo_famille":{
 		"text":"Une photo de famille affichant [color=*person*][url=Yeong-ho]Yeong-ho[/url][/color], [color=*person*][url=Seon-yeong]Seon-yeong[/url][/color], et leurs trois enfants [color=*person*][url=Sun-na, Yun-bok et Tae-sun]Sun-na, Yun-bok et Tae-sun[/url][/color].",
-		"hidden_texture_path":"res://icon.png",
-		"found_texture_path":"res://icon.png"
+		"found_texture_path":"res://assets/2D/click/photoFamille.png",
+		"hidden_texture_path":"res://assets/2D/cadre2.png"
 	},
 	"photo_deces":{
 		"text":"Portrait funéraire commémorant [color=*event*][url=le décès de Seon-yeong]le décès de Seon-yeong[/url][/color].",
-		"hidden_texture_path":"res://icon.png",
-		"found_texture_path":"res://icon.png"
+		"hidden_texture_path":"res://assets/2D/cadre3.png",
+		"found_texture_path":"res://assets/2D/click/photoFuneraire.png"
 	},
 	"photo_mariage":{
 		"text":"Photo du mariage de [color=*person*][url=Sonya]Sonya[/url][/color] et [color=*person*][url=Yeong-ho]Yeong-ho[/url][/color].",
-		"hidden_texture_path":"res://icon.png",
-		"found_texture_path":"res://icon.png"
+		"hidden_texture_path":"res://assets/2D/cadre1.png",
+		"found_texture_path":"res://assets/2D/click/photoMariage.png"
 	},
 	"lettre_front":{
 		"text":"Lettre de [color=*person*][url=Yeong-ho]Yeong-ho[/url][/color] [color=*event*][url=envoyé au front]envoyé au front[/url][/color] pendant [color=*event*][url=la guerre de Corée]la guerre de Corée[/url][/color] avec [color=*person*][url=Cheol-ho]Cheol-ho[/url][/color].",
-		"hidden_texture_path":"res://icon.png",
-		"found_texture_path":"res://icon.png"
+		"hidden_texture_path":"res://assets/2D/click/enveloppe ferme.png",
+		"found_texture_path":"res://assets/2D/click/lettresdamour.png"
 	},
 	"photo_front":{
 		"text":"Photo de [color=*person*][url=Yeong-ho]Yeong-ho[/url][/color] envoyé au front pendant [color=*event*][url=la guerre de Corée]la guerre de Corée[/url][/color] avec [color=*person*][url=Cheol-ho]Cheol-ho[/url][/color].",
-		"hidden_texture_path":"res://icon.png",
-		"found_texture_path":"res://icon.png"
+		"hidden_texture_path":"res://assets/2D/click/enveloppe ferme.png",
+		"found_texture_path":"res://assets/2D/click/photoFront.png"
 	},
 	"journal":{
 		"text":"Une page du journal intime de [color=*person*][url=Sonya]Sonya[/url][/color], dans lequel elle mentionne [color=*person*][url=Michael, un soldat américain]Michael, un soldat américain[/url][/color].",
-		"hidden_texture_path":"res://icon.png",
-		"found_texture_path":"res://icon.png"
+		"hidden_texture_path":"res://assets/2D/click/livre.png",
+		"found_texture_path":"res://assets/2D/click/note-piano.png"
 	},
 	"telegramme":{
 		"text":"Télégramme annonçant le décès de [color=*person*][url=Yeong-ho]Yeong-ho[/url][/color].",
-		"hidden_texture_path":"res://icon.png",
-		"found_texture_path":"res://icon.png"
+		"hidden_texture_path":"res://assets/2D/click/enveloppe ferme.png",
+		"found_texture_path":"res://assets/2D/click/doc offi.png"
 	},
 	"lettre_michael":{
 		"text":"Lettre à [color=*person*][url=Michael, un soldat américain]Michael[/url][/color], où [color=*person*][url=Sonya]Sonya[/url][/color] décrit son plan pour [color=*event*][url=s’emparer de la demeure familiale]s’emparer de la demeure familiale[/url][/color] et se débarrasser des enfants.",
-		"hidden_texture_path":"res://icon.png",
-		"found_texture_path":"res://icon.png"
+		"hidden_texture_path":"res://assets/2D/click/enveloppe ferme.png",
+		"found_texture_path":"res://assets/2D/click/lettresdamour.png"
 	},
 	"titre_proprio":{
 		"text":"[color=*object*][url=titre de propriété]Titre de propriété[/url][/color] au nom de Sonya, pour [color=*event*][url=s’emparer de la demeure familiale]s’emparer de la demeure familiale[/url][/color].",
-		"hidden_texture_path":"res://icon.png",
-		"found_texture_path":"res://icon.png"
+		"hidden_texture_path":"res://assets/2D/click/enveloppe ferme.png",
+		"found_texture_path":"res://assets/2D/click/faux-acte-propriete.png"
 	},
 	"testament":{
 		"text":"[color=*object*][url=le testament de Yeong-ho]Le testament de Yeong-ho[/url][/color], dans lequel il désigne ses enfants comme ses uniques successeurs.",
-		"hidden_texture_path":"res://icon.png",
-		"found_texture_path":"res://icon.png"
+		"hidden_texture_path":"res://assets/2D/click/testamentP3.png",
+		"found_texture_path":"res://assets/2D/click/testament.png"
 	}
 }
 
