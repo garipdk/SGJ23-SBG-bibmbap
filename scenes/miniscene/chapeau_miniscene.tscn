@@ -4,7 +4,7 @@
 [ext_resource path="res://scripts-gdscript/gray_font.gd" type="Script" id=2]
 [ext_resource path="res://scripts-gdscript/blanc_canvas.gd" type="Script" id=3]
 [ext_resource path="res://scenes/table.tscn" type="PackedScene" id=4]
-[ext_resource path="res://scenes/chapeau.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/objects/chapeau.tscn" type="PackedScene" id=5]
 [ext_resource path="res://icon.png" type="Texture" id=6]
 
 [sub_resource type="Gradient" id=5]
@@ -55,5 +55,3 @@ position = Vector2( 289, 191 )
 
 [node name="table2" parent="." instance=ExtResource( 4 )]
 position = Vector2( 327, 330 )
-
-[connection signal="pressed" from="Button" to="." method="_on_gray_font_gui_input"]
