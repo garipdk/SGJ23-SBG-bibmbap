@@ -46,6 +46,8 @@ func _input_event(_viewport, event, _shape_idx):
 			if (not GameState.text_box_in_used) and can_click and event is InputEventMouseButton\
 			   and event.pressed and event.button_index == BUTTON_LEFT:
 				GameState.emit_signal("object_click", name, object_type)
+				for s in shinies:
+					s.visible = false
 				if has_limited_trys:
 					number_of_try-=1
 		else:

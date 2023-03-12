@@ -39,12 +39,13 @@ texture = SubResource( 2 )
 centered = false
 script = ExtResource( 3 )
 
-[node name="Button" type="Button" parent="."]
+[node name="Button" type="TextureButton" parent="."]
 margin_left = 813.0
-margin_top = 7.0
-margin_right = 889.0
-margin_bottom = 77.0
-icon = ExtResource( 6 )
+margin_top = 22.0
+margin_right = 877.0
+margin_bottom = 91.0
+toggle_mode = true
+texture_normal = ExtResource( 6 )
 
 [node name="chapeau" parent="." instance=ExtResource( 5 )]
 position = Vector2( 327, 257 )

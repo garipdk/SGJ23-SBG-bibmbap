@@ -37,11 +37,10 @@ texture = SubResource( 5 )
 centered = false
 script = ExtResource( 3 )
 
-[node name="Button" type="Button" parent="."]
-margin_left = 929.0
-margin_top = 8.0
-margin_right = 1005.0
-margin_bottom = 78.0
-icon = ExtResource( 4 )
-
-[connection signal="pressed" from="Button" to="." method="_on_gray_font_gui_input"]
+[node name="Button" type="TextureButton" parent="."]
+margin_left = 813.0
+margin_top = 22.0
+margin_right = 877.0
+margin_bottom = 91.0
+toggle_mode = true
+texture_normal = ExtResource( 4 )
