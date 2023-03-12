@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Ouverture_lettres.mp3-ab4daa6afbcb379f53481a43e1544191.mp3str"
+
+[deps]
+
+source_file="res://assets/SFX/Ouverture_lettres.mp3"
+dest_files=[ "res://.import/Ouverture_lettres.mp3-ab4daa6afbcb379f53481a43e1544191.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

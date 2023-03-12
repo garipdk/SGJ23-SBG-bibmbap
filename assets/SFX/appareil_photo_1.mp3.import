@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/appareil_photo_1.mp3-328e3c95f325791eb89e81d03faabe3f.mp3str"
+
+[deps]
+
+source_file="res://assets/SFX/appareil_photo_1.mp3"
+dest_files=[ "res://.import/appareil_photo_1.mp3-328e3c95f325791eb89e81d03faabe3f.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

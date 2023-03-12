@@ -4,6 +4,7 @@ export(float, 0.1, 0.9) var canvas_size = 0.9
 
 var one_time : bool = true
 func _ready():
+	$Button.connect("pressed",self,"_on_gray_font_gui_input")
 	$blanc_canvas.canvas_size = canvas_size
 	self.visible = false
 	for c in get_children():
